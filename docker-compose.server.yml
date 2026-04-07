@@ -1,7 +1,7 @@
 services:
-  approf:
+  profeli:
     image: aragz/ganesha:latest
-    container_name: approf-website
+    container_name: profeli-website
     restart: unless-stopped
     ports:
       - "3000:3000"

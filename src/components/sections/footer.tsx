@@ -12,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <div className="text-lg font-extrabold text-blue-800 mb-3">📚 ApProf</div>
+            <div className="text-lg font-extrabold text-blue-800 mb-3">📚 Profeli</div>
             <p className="text-sm text-gray-500 leading-relaxed">
               {t.footer.description}
             </p>
@@ -68,7 +68,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200 text-center text-sm text-gray-400">
-          © {year} ApProf. {t.footer.rights}
+          © {year} Profeli. {t.footer.rights}
         </div>
       </div>
     </footer>

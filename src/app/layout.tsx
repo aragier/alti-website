@@ -8,7 +8,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "ApProf — Ferramenta Digital para Professores",
+  title: "Profeli — Ferramenta Digital para Professores",
   description:
     "Gestão de turmas, assiduidade, planeamento e calendário. Funciona offline. A ferramenta completa para professores em Portugal.",
 };

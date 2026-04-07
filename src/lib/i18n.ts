@@ -114,7 +114,7 @@ export const dictionaries = {
       button: "Inscrever na lista de espera",
       placeholder: "O seu email",
       success: "Está na lista! 🎉",
-      successSub: "Avisamos assim que o ApProf estiver disponível.",
+      successSub: "Avisamos assim que o Profeli estiver disponível.",
       count: "professores já na lista",
     },
     footer: {
@@ -243,7 +243,7 @@ export const dictionaries = {
       button: "Join Waitlist",
       placeholder: "Your email",
       success: "You're on the list! 🎉",
-      successSub: "We'll let you know as soon as ApProf is available.",
+      successSub: "We'll let you know as soon as Profeli is available.",
       count: "teachers already on the list",
     },
     footer: {
