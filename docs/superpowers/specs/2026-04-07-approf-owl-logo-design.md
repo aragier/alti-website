@@ -132,6 +132,14 @@ For the PWA splash screen, use an inverted variant:
 | Modify | `src/components/sections/hero.tsx` | Add owl logo to hero section |
 | Modify | `src/components/sections/navbar.tsx` | Replace 📚 emoji with owl logo |
 
+## PNG/ICO Generation
+
+Since this is a code-based SVG logo, PNG and ICO files will be generated using the `sharp` npm package (already common in Next.js ecosystems). The SVG will be rendered to a buffer and resized to the required dimensions. If `sharp` is not available, a script using `@resvg/resvg-js` can be used as an alternative.
+
+## Splash Screen File
+
+The splash screen variant will be implemented as a dedicated component at `src/components/ui/splash-screen.tsx` in the ganeshaTeach project. This component renders the inverted owl on a blue gradient background with the "ApProf" text. It can be used as a loading screen or PWA splash.
+
 ## Out of Scope
 
 - Dark mode variant of the logo (can be added later)
