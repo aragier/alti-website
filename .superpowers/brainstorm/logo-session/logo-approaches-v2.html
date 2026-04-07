@@ -1,0 +1,175 @@
+<h2>Logo ApProf — Ronda 2</h2>
+<p class="subtitle">Menos redondo, mais carácter. Cada opção inclui preview como ícone pequeno (32px).</p>
+
+<div class="cards" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+  <!-- APPROACH A: Angular/Shield Owl -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 12px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem;">
+      <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Shield/angular owl shape -->
+        <path d="M70,12 L30,35 L30,85 Q30,115 70,128 Q110,115 110,85 L110,35 Z" fill="#4f46e5" opacity="0.08"/>
+        <path d="M70,12 L30,35 L30,85 Q30,115 70,128 Q110,115 110,85 L110,35 Z" fill="none" stroke="#4f46e5" stroke-width="3"/>
+        <!-- Ear tufts - sharp angular -->
+        <path d="M42,35 L50,18 L58,38" fill="#4f46e5" opacity="0.7"/>
+        <path d="M82,38 L90,18 L98,35" fill="#4f46e5" opacity="0.7"/>
+        <!-- Eyes - slightly angular, not perfect circles -->
+        <path d="M46,58 Q46,48 56,48 Q66,48 66,58 Q66,68 56,68 Q46,68 46,58 Z" fill="white" stroke="#4f46e5" stroke-width="2"/>
+        <circle cx="58" cy="57" r="5.5" fill="#4f46e5"/>
+        <circle cx="59.5" cy="55.5" r="2" fill="white"/>
+        <path d="M74,58 Q74,48 84,48 Q94,48 94,58 Q94,68 84,68 Q74,68 74,58 Z" fill="white" stroke="#4f46e5" stroke-width="2"/>
+        <circle cx="82" cy="57" r="5.5" fill="#4f46e5"/>
+        <circle cx="83.5" cy="55.5" r="2" fill="white"/>
+        <!-- Beak - sharp diamond -->
+        <path d="M70,66 L65,74 L70,80 L75,74 Z" fill="#f59e0b"/>
+        <!-- Chest V pattern -->
+        <path d="M55,85 L70,100 L85,85" fill="none" stroke="#4f46e5" stroke-width="2" opacity="0.3"/>
+        <path d="M50,80 L70,96 L90,80" fill="none" stroke="#4f46e5" stroke-width="1.5" opacity="0.2"/>
+      </svg>
+    </div>
+    <!-- Small icon preview -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; padding: 0.5rem; background: #f1f5f9; border-radius: 8px;">
+      <span style="font-size: 0.7rem; color: #94a3b8;">Ícone 32px:</span>
+      <svg width="32" height="32" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70,12 L30,35 L30,85 Q30,115 70,128 Q110,115 110,85 L110,35 Z" fill="#4f46e5" opacity="0.1"/>
+        <path d="M70,12 L30,35 L30,85 Q30,115 70,128 Q110,115 110,85 L110,35 Z" fill="none" stroke="#4f46e5" stroke-width="5"/>
+        <path d="M42,35 L50,18 L58,38" fill="#4f46e5" opacity="0.7"/>
+        <path d="M82,38 L90,18 L98,35" fill="#4f46e5" opacity="0.7"/>
+        <circle cx="56" cy="57" r="12" fill="white" stroke="#4f46e5" stroke-width="4"/>
+        <circle cx="58" cy="57" r="6" fill="#4f46e5"/>
+        <circle cx="84" cy="57" r="12" fill="white" stroke="#4f46e5" stroke-width="4"/>
+        <circle cx="82" cy="57" r="6" fill="#4f46e5"/>
+        <path d="M70,66 L65,74 L70,80 L75,74 Z" fill="#f59e0b"/>
+      </svg>
+      <svg width="20" height="20" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70,12 L30,35 L30,85 Q30,115 70,128 Q110,115 110,85 L110,35 Z" fill="#4f46e5"/>
+        <circle cx="56" cy="57" r="12" fill="white"/>
+        <circle cx="58" cy="57" r="6" fill="#4f46e5"/>
+        <circle cx="84" cy="57" r="12" fill="white"/>
+        <circle cx="82" cy="57" r="6" fill="#4f46e5"/>
+        <path d="M70,66 L65,74 L70,80 L75,74 Z" fill="#f59e0b"/>
+      </svg>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #1e1b4b; font-size: 1.05rem;">A) Coruja Escudo</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Silhueta angular tipo escudo. Orelhas pontiagudas. Peito com padrão V. Forte em qualquer tamanho.</p>
+    </div>
+  </div>
+
+  <!-- APPROACH B: Flat Minimal Owl - square-ish -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 12px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem;">
+      <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Square-ish owl with rounded corners but NOT circular -->
+        <!-- Body - rounded square -->
+        <rect x="28" y="30" width="84" height="90" rx="16" fill="#0d9488" opacity="0.1"/>
+        <rect x="28" y="30" width="84" height="90" rx="16" fill="none" stroke="#0d9488" stroke-width="2.5"/>
+        <!-- Ear tufts poking above -->
+        <path d="M38,32 L45,10 L55,32" fill="#0d9488"/>
+        <path d="M85,32 L95,10 L102,32" fill="#0d9488"/>
+        <!-- Eyes - large, expressive, slightly squared -->
+        <rect x="38" y="48" rx="6" width="26" height="26" fill="white" stroke="#0d9488" stroke-width="2"/>
+        <circle cx="54" cy="61" r="7" fill="#0d9488"/>
+        <circle cx="56" cy="59" r="2.5" fill="white"/>
+        <rect x="76" y="48" rx="6" width="26" height="26" fill="white" stroke="#0d9488" stroke-width="2"/>
+        <circle cx="86" cy="61" r="7" fill="#0d9488"/>
+        <circle cx="88" cy="59" r="2.5" fill="white"/>
+        <!-- Beak -->
+        <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        <!-- Feet at bottom -->
+        <path d="M48,120 L42,128 M48,120 L48,128 M48,120 L54,128" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+        <path d="M92,120 L86,128 M92,120 L92,128 M92,120 L98,128" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <!-- Small icon preview -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; padding: 0.5rem; background: #f1f5f9; border-radius: 8px;">
+      <span style="font-size: 0.7rem; color: #94a3b8;">Ícone 32px:</span>
+      <svg width="32" height="32" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="28" y="30" width="84" height="90" rx="16" fill="#0d9488" opacity="0.15"/>
+        <rect x="28" y="30" width="84" height="90" rx="16" fill="none" stroke="#0d9488" stroke-width="5"/>
+        <path d="M38,32 L45,10 L55,32" fill="#0d9488"/>
+        <path d="M85,32 L95,10 L102,32" fill="#0d9488"/>
+        <rect x="38" y="48" rx="6" width="26" height="26" fill="white" stroke="#0d9488" stroke-width="4"/>
+        <circle cx="54" cy="61" r="8" fill="#0d9488"/>
+        <rect x="76" y="48" rx="6" width="26" height="26" fill="white" stroke="#0d9488" stroke-width="4"/>
+        <circle cx="86" cy="61" r="8" fill="#0d9488"/>
+        <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+      </svg>
+      <svg width="20" height="20" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <rect x="28" y="30" width="84" height="90" rx="16" fill="#0d9488"/>
+        <path d="M38,32 L45,10 L55,32" fill="#0d9488"/>
+        <path d="M85,32 L95,10 L102,32" fill="#0d9488"/>
+        <rect x="38" y="48" rx="4" width="26" height="26" fill="white"/>
+        <circle cx="54" cy="61" r="8" fill="#0d9488"/>
+        <rect x="76" y="48" rx="4" width="26" height="26" fill="white"/>
+        <circle cx="86" cy="61" r="8" fill="#0d9488"/>
+        <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+      </svg>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #134e4a; font-size: 1.05rem;">B) Coruja Flat</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Corpo retangular arredondado. Olhos quadrados grandes. Orelhas de ponta. Estilo app moderno. Cores: Teal + Âmbar.</p>
+    </div>
+  </div>
+
+  <!-- APPROACH C: Owl Face Only - hexagonal feel -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 12px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem;">
+      <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Owl face only - angular/hex shape -->
+        <!-- Face shape - like a rounded hexagon -->
+        <path d="M70,15 L110,35 L115,75 L100,110 L70,125 L40,110 L25,75 L30,35 Z" fill="#7c3aed" opacity="0.08"/>
+        <path d="M70,15 L110,35 L115,75 L100,110 L70,125 L40,110 L25,75 L30,35 Z" fill="none" stroke="#7c3aed" stroke-width="2.5" stroke-linejoin="round"/>
+        <!-- Ear tufts -->
+        <path d="M37,32 L32,8 L55,25" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M103,32 L108,8 L85,25" fill="none" stroke="#7c3aed" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Large expressive eyes -->
+        <path d="M36,60 L52,48 L68,60 L52,72 Z" fill="white" stroke="#7c3aed" stroke-width="2"/>
+        <circle cx="52" cy="60" r="7" fill="#7c3aed"/>
+        <circle cx="54" cy="58" r="2.5" fill="white"/>
+        <path d="M72,60 L88,48 L104,60 L88,72 Z" fill="white" stroke="#7c3aed" stroke-width="2"/>
+        <circle cx="88" cy="60" r="7" fill="#7c3aed"/>
+        <circle cx="90" cy="58" r="2.5" fill="white"/>
+        <!-- Brow line connecting eyes -->
+        <path d="M36,55 Q52,44 70,55 Q88,44 104,55" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.4"/>
+        <!-- Beak -->
+        <path d="M70,72 L64,82 L70,90 L76,82 Z" fill="#f59e0b"/>
+        <!-- Subtle feather marks on cheeks -->
+        <path d="M38,80 L45,85 M40,86 L47,90" stroke="#7c3aed" stroke-width="1.2" opacity="0.25" stroke-linecap="round"/>
+        <path d="M102,80 L95,85 M100,86 L93,90" stroke="#7c3aed" stroke-width="1.2" opacity="0.25" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <!-- Small icon preview -->
+    <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1rem; padding: 0.5rem; background: #f1f5f9; border-radius: 8px;">
+      <span style="font-size: 0.7rem; color: #94a3b8;">Ícone 32px:</span>
+      <svg width="32" height="32" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70,15 L110,35 L115,75 L100,110 L70,125 L40,110 L25,75 L30,35 Z" fill="#7c3aed" opacity="0.12"/>
+        <path d="M70,15 L110,35 L115,75 L100,110 L70,125 L40,110 L25,75 L30,35 Z" fill="none" stroke="#7c3aed" stroke-width="5" stroke-linejoin="round"/>
+        <path d="M36,60 L52,48 L68,60 L52,72 Z" fill="white" stroke="#7c3aed" stroke-width="3"/>
+        <circle cx="52" cy="60" r="8" fill="#7c3aed"/>
+        <path d="M72,60 L88,48 L104,60 L88,72 Z" fill="white" stroke="#7c3aed" stroke-width="3"/>
+        <circle cx="88" cy="60" r="8" fill="#7c3aed"/>
+        <path d="M70,72 L64,82 L70,90 L76,82 Z" fill="#f59e0b"/>
+      </svg>
+      <svg width="20" height="20" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <path d="M70,15 L110,35 L115,75 L100,110 L70,125 L40,110 L25,75 L30,35 Z" fill="#7c3aed"/>
+        <path d="M36,60 L52,48 L68,60 L52,72 Z" fill="white"/>
+        <circle cx="52" cy="60" r="8" fill="#7c3aed"/>
+        <path d="M72,60 L88,48 L104,60 L88,72 Z" fill="white"/>
+        <circle cx="88" cy="60" r="8" fill="#7c3aed"/>
+        <path d="M70,72 L64,82 L70,90 L76,82 Z" fill="#f59e0b"/>
+      </svg>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #5b21b6; font-size: 1.05rem;">C) Face Hexagonal</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Só a cara da coruja. Olhos em losango. Silhueta angular forte. Perfeito como ícone. Cores: Violeta + Âmbar.</p>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top: 2rem; padding: 1.25rem; background: #fefce8; border-radius: 10px; border: 1px solid #fde68a;">
+  <p style="margin: 0; color: #92400e; font-size: 0.85rem;">
+    💡 <strong>Mudanças desta ronda:</strong> Formas angulares em vez de circulares · Silhuetas mais fortes · Cada opção testada como ícone 32px e 20px · Mais carácter na coruja
+  </p>
+</div>

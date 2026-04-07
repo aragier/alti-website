@@ -1,0 +1,232 @@
+<h2>Variações da Coruja Flat</h2>
+<p class="subtitle">Baseada na opção B. Mais arredondada, com variações de cor/fundo. Clica na que preferires.</p>
+
+<div class="cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+  <!-- VAR 1: Rounded + solid bg + light owl inside -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <!-- Main logo -->
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Solid colored background shape -->
+        <rect x="18" y="22" width="104" height="108" rx="26" fill="#0d9488"/>
+        <!-- Ear tufts in color -->
+        <path d="M38,24 L46,4 L56,24" fill="#0d9488"/>
+        <path d="M84,24 L94,4 L102,24" fill="#0d9488"/>
+        <!-- Light body inside -->
+        <rect x="32" y="38" width="76" height="76" rx="18" fill="white" opacity="0.95"/>
+        <!-- Eyes - rounded squares -->
+        <rect x="40" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+        <circle cx="52" cy="60" r="6" fill="white"/>
+        <circle cx="54" cy="58" r="2" fill="#0d9488"/>
+        <rect x="76" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+        <circle cx="88" cy="60" r="6" fill="white"/>
+        <circle cx="90" cy="58" r="2" fill="#0d9488"/>
+        <!-- Beak -->
+        <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        <!-- Small wing marks -->
+        <path d="M38,80 Q44,88 38,96" fill="none" stroke="#0d9488" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+        <path d="M102,80 Q96,88 102,96" fill="none" stroke="#0d9488" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+      </svg>
+      <!-- Icon previews -->
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="#0d9488"/>
+          <path d="M38,24 L46,4 L56,24" fill="#0d9488"/>
+          <path d="M84,24 L94,4 L102,24" fill="#0d9488"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="white" opacity="0.95"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+          <circle cx="52" cy="60" r="6" fill="white"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+          <circle cx="88" cy="60" r="6" fill="white"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="#0d9488"/>
+          <path d="M38,24 L46,4 L56,24" fill="#0d9488"/>
+          <path d="M84,24 L94,4 L102,24" fill="#0d9488"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="white" opacity="0.95"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+          <circle cx="52" cy="60" r="6" fill="white"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+          <circle cx="88" cy="60" r="6" fill="white"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #134e4a; font-size: 1.05rem;">A) Teal sólido + interior branco</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Fundo teal sólido, corpo da coruja branco por dentro. Olhos coloridos. Orelhas integradas no fundo.</p>
+    </div>
+  </div>
+
+  <!-- VAR 2: Gradient bg + white owl -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6366f1"/>
+            <stop offset="100%" style="stop-color:#8b5cf6"/>
+          </linearGradient>
+        </defs>
+        <!-- Gradient background -->
+        <rect x="18" y="22" width="104" height="108" rx="26" fill="url(#grad1)"/>
+        <!-- Ear tufts -->
+        <path d="M38,24 L46,4 L56,24" fill="#6366f1"/>
+        <path d="M84,24 L94,4 L102,24" fill="#8b5cf6"/>
+        <!-- White owl body -->
+        <rect x="32" y="38" width="76" height="76" rx="18" fill="white" opacity="0.93"/>
+        <!-- Eyes -->
+        <rect x="40" y="48" rx="8" width="24" height="24" fill="#6366f1"/>
+        <circle cx="52" cy="60" r="6" fill="white"/>
+        <circle cx="54" cy="58" r="2" fill="#6366f1"/>
+        <rect x="76" y="48" rx="8" width="24" height="24" fill="#8b5cf6"/>
+        <circle cx="88" cy="60" r="6" fill="white"/>
+        <circle cx="90" cy="58" r="2" fill="#8b5cf6"/>
+        <!-- Beak -->
+        <path d="M70,76 L65,84 L75,84 Z" fill="#fbbf24"/>
+        <!-- Subtle smile -->
+        <path d="M62,90 Q70,96 78,90" fill="none" stroke="#a78bfa" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="grad1s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient></defs>
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="url(#grad1s)"/>
+          <path d="M38,24 L46,4 L56,24" fill="#6366f1"/><path d="M84,24 L94,4 L102,24" fill="#8b5cf6"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="white" opacity="0.93"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="#6366f1"/><circle cx="52" cy="60" r="6" fill="white"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="#8b5cf6"/><circle cx="88" cy="60" r="6" fill="white"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#fbbf24"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="grad1xs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#8b5cf6"/></linearGradient></defs>
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="url(#grad1xs)"/>
+          <path d="M38,24 L46,4 L56,24" fill="#6366f1"/><path d="M84,24 L94,4 L102,24" fill="#8b5cf6"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="white" opacity="0.93"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="#6366f1"/><circle cx="52" cy="60" r="6" fill="white"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="#8b5cf6"/><circle cx="88" cy="60" r="6" fill="white"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#fbbf24"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #4338ca; font-size: 1.05rem;">B) Gradiente Indigo→Violeta + branco</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Fundo em gradiente. Olho esquerdo indigo, direito violeta — toque divertido. Sorriso subtil.</p>
+    </div>
+  </div>
+
+  <!-- VAR 3: Dark bg + colored owl -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Dark navy background -->
+        <rect x="18" y="22" width="104" height="108" rx="26" fill="#1e1b4b"/>
+        <!-- Ear tufts -->
+        <path d="M38,24 L46,4 L56,24" fill="#1e1b4b"/>
+        <path d="M84,24 L94,4 L102,24" fill="#1e1b4b"/>
+        <!-- Light cream owl body -->
+        <rect x="32" y="38" width="76" height="76" rx="18" fill="#fef3c7" opacity="0.95"/>
+        <!-- Eyes - teal -->
+        <rect x="40" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+        <circle cx="52" cy="60" r="6" fill="#fef3c7"/>
+        <circle cx="54" cy="58" r="2" fill="#0d9488"/>
+        <rect x="76" y="48" rx="8" width="24" height="24" fill="#0d9488"/>
+        <circle cx="88" cy="60" r="6" fill="#fef3c7"/>
+        <circle cx="90" cy="58" r="2" fill="#0d9488"/>
+        <!-- Beak -->
+        <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        <!-- Belly dots -->
+        <circle cx="60" cy="96" r="2.5" fill="#0d9488" opacity="0.2"/>
+        <circle cx="70" cy="100" r="2.5" fill="#0d9488" opacity="0.2"/>
+        <circle cx="80" cy="96" r="2.5" fill="#0d9488" opacity="0.2"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="#1e1b4b"/>
+          <path d="M38,24 L46,4 L56,24" fill="#1e1b4b"/><path d="M84,24 L94,4 L102,24" fill="#1e1b4b"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="#fef3c7" opacity="0.95"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="#0d9488"/><circle cx="52" cy="60" r="6" fill="#fef3c7"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="#0d9488"/><circle cx="88" cy="60" r="6" fill="#fef3c7"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="#1e1b4b"/>
+          <path d="M38,24 L46,4 L56,24" fill="#1e1b4b"/><path d="M84,24 L94,4 L102,24" fill="#1e1b4b"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="#fef3c7" opacity="0.95"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="#0d9488"/><circle cx="52" cy="60" r="6" fill="#fef3c7"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="#0d9488"/><circle cx="88" cy="60" r="6" fill="#fef3c7"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #1e1b4b; font-size: 1.05rem;">C) Navy escuro + coruja creme</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Fundo navy premium. Interior creme quente. Olhos teal. Contraste forte, muito legível em tamanho pequeno.</p>
+    </div>
+  </div>
+
+  <!-- VAR 4: Outline only + colored bg behind -->
+  <div class="card" data-choice="d" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <!-- Soft colored background -->
+        <rect x="18" y="22" width="104" height="108" rx="26" fill="#dbeafe"/>
+        <!-- Ear tufts -->
+        <path d="M38,24 L46,4 L56,24" fill="#dbeafe"/>
+        <path d="M84,24 L94,4 L102,24" fill="#dbeafe"/>
+        <!-- Owl body - outline style on light bg -->
+        <rect x="32" y="38" width="76" height="76" rx="18" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+        <!-- Eyes -->
+        <rect x="40" y="48" rx="8" width="24" height="24" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+        <circle cx="52" cy="60" r="6" fill="#2563eb"/>
+        <circle cx="54" cy="58" r="2" fill="white"/>
+        <rect x="76" y="48" rx="8" width="24" height="24" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+        <circle cx="88" cy="60" r="6" fill="#2563eb"/>
+        <circle cx="90" cy="58" r="2" fill="white"/>
+        <!-- Beak -->
+        <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b" stroke="#2563eb" stroke-width="1"/>
+        <!-- Feet -->
+        <path d="M52,114 L46,122 M52,114 L52,122 M52,114 L58,122" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+        <path d="M88,114 L82,122 M88,114 L88,122 M88,114 L94,122" stroke="#2563eb" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="#dbeafe"/>
+          <path d="M38,24 L46,4 L56,24" fill="#dbeafe"/><path d="M84,24 L94,4 L102,24" fill="#dbeafe"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="white" stroke="#2563eb" stroke-width="4"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="white" stroke="#2563eb" stroke-width="4"/>
+          <circle cx="52" cy="60" r="7" fill="#2563eb"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="white" stroke="#2563eb" stroke-width="4"/>
+          <circle cx="88" cy="60" r="7" fill="#2563eb"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <rect x="18" y="22" width="104" height="108" rx="26" fill="#dbeafe"/>
+          <path d="M38,24 L46,4 L56,24" fill="#dbeafe"/><path d="M84,24 L94,4 L102,24" fill="#dbeafe"/>
+          <rect x="32" y="38" width="76" height="76" rx="18" fill="white"/>
+          <rect x="40" y="48" rx="8" width="24" height="24" fill="#2563eb"/>
+          <circle cx="52" cy="60" r="6" fill="white"/>
+          <rect x="76" y="48" rx="8" width="24" height="24" fill="#2563eb"/>
+          <circle cx="88" cy="60" r="6" fill="white"/>
+          <path d="M70,76 L65,84 L75,84 Z" fill="#f59e0b"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #1e40af; font-size: 1.05rem;">D) Azul claro + contorno</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Fundo azul suave. Coruja em contorno branco/azul. Estilo limpo e acessível. Pézinhos incluídos.</p>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top: 2rem; padding: 1.25rem; background: #f0fdf4; border-radius: 10px; border: 1px solid #bbf7d0;">
+  <p style="margin: 0; color: #166534; font-size: 0.85rem;">
+    🎯 <strong>Todas baseadas na Coruja Flat (B):</strong> Mesma estrutura — orelhas pontiagudas, olhos quadrados arredondados, bico triangular. A diferença é o tratamento de cor: sólido, gradiente, escuro, ou contorno.
+  </p>
+</div>

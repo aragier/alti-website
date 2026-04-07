@@ -1,0 +1,131 @@
+<h2>Logo ApProf — 3 Abordagens</h2>
+<p class="subtitle">Clica na que mais te agrada. Todas seguem o conceito coruja + minimalista com toque divertido.</p>
+
+<div class="cards" style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+  <!-- APPROACH A: Geometric Owl -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 16px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1.5rem;">
+      <!-- Geometric minimal owl made of circles -->
+      <svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- Body circle -->
+        <circle cx="80" cy="90" r="55" fill="#6366f1" opacity="0.12"/>
+        <!-- Head -->
+        <circle cx="80" cy="55" r="35" fill="#6366f1" opacity="0.18"/>
+        <!-- Left eye circle -->
+        <circle cx="66" cy="50" r="14" fill="white" stroke="#6366f1" stroke-width="2.5"/>
+        <circle cx="66" cy="50" r="6" fill="#6366f1"/>
+        <circle cx="68" cy="48" r="2" fill="white"/>
+        <!-- Right eye circle -->
+        <circle cx="94" cy="50" r="14" fill="white" stroke="#6366f1" stroke-width="2.5"/>
+        <circle cx="94" cy="50" r="6" fill="#6366f1"/>
+        <circle cx="96" cy="48" r="2" fill="white"/>
+        <!-- Beak -->
+        <polygon points="80,60 75,68 85,68" fill="#f59e0b"/>
+        <!-- Ears/tufts -->
+        <polygon points="52,30 58,42 48,42" fill="#6366f1" opacity="0.6"/>
+        <polygon points="108,30 102,42 112,42" fill="#6366f1" opacity="0.6"/>
+        <!-- Graduation cap -->
+        <polygon points="50,32 80,18 110,32 80,42" fill="#1e1b4b" opacity="0.85"/>
+        <rect x="76" y="12" width="8" height="8" rx="4" fill="#f59e0b"/>
+      </svg>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #1e1b4b; font-size: 1.1rem;">A) Coruja Geométrica</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.85rem;">Formas circulares simples. Chapéu de graduação. Tom académico mas simpático. Cores: Indigo + Âmbar.</p>
+    </div>
+  </div>
+
+  <!-- APPROACH B: Abstract Owl Eyes -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 16px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1.5rem;">
+      <svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- Just the owl eyes as the main mark - ultra minimal -->
+        <!-- Left eye -->
+        <circle cx="58" cy="75" r="24" fill="none" stroke="#0ea5e9" stroke-width="4"/>
+        <circle cx="58" cy="75" r="10" fill="#0ea5e9"/>
+        <circle cx="61" cy="72" r="3.5" fill="white"/>
+        <!-- Right eye -->
+        <circle cx="102" cy="75" r="24" fill="none" stroke="#0ea5e9" stroke-width="4"/>
+        <circle cx="102" cy="75" r="10" fill="#0ea5e9"/>
+        <circle cx="105" cy="72" r="3.5" fill="white"/>
+        <!-- Small beak triangle between eyes -->
+        <polygon points="80,88 75,96 85,96" fill="#f97316"/>
+        <!-- Subtle ear tufts - just small lines -->
+        <line x1="42" y1="52" x2="48" y2="58" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"/>
+        <line x1="36" y1="56" x2="44" y2="60" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"/>
+        <line x1="118" y1="52" x2="112" y2="58" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"/>
+        <line x1="124" y1="56" x2="116" y2="60" stroke="#0ea5e9" stroke-width="3" stroke-linecap="round"/>
+        <!-- Text mark below -->
+        <text x="80" y="132" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="800" font-size="22" fill="#0c4a6e" letter-spacing="-0.5">ApProf</text>
+      </svg>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #0c4a6e; font-size: 1.1rem;">B) Olhos de Coruja (Abstracto)</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.85rem;">Só os olhos grandes e expressivos. Ultra minimal. Funciona como ícone pequeno. Cores: Sky Blue + Laranja.</p>
+    </div>
+  </div>
+
+  <!-- APPROACH C: Owl + Book mashup -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 16px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1.5rem;">
+      <svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+        <!-- Owl sitting on/emerging from an open book -->
+        <!-- Open book base -->
+        <path d="M30,115 Q80,105 80,105 Q80,105 130,115 L130,125 Q80,115 80,115 Q80,115 30,125 Z" fill="#8b5cf6" opacity="0.15"/>
+        <path d="M30,115 Q80,105 80,105" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round"/>
+        <path d="M80,105 Q80,105 130,115" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="80" y1="105" x2="80" y2="125" stroke="#8b5cf6" stroke-width="2" opacity="0.5"/>
+        <!-- Pages lines left -->
+        <path d="M42,118 Q62,112 78,113" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
+        <path d="M42,122 Q62,116 78,117" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
+        <!-- Pages lines right -->
+        <path d="M82,113 Q98,112 118,118" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
+        <path d="M82,117 Q98,116 118,122" fill="none" stroke="#8b5cf6" stroke-width="1" opacity="0.3"/>
+
+        <!-- Owl body above book -->
+        <ellipse cx="80" cy="78" rx="28" ry="30" fill="#8b5cf6" opacity="0.12"/>
+        <!-- Head -->
+        <circle cx="80" cy="55" r="24" fill="#8b5cf6" opacity="0.18"/>
+        <!-- Eyes -->
+        <circle cx="70" cy="52" r="10" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+        <circle cx="70" cy="52" r="4.5" fill="#8b5cf6"/>
+        <circle cx="72" cy="50" r="1.5" fill="white"/>
+        <circle cx="90" cy="52" r="10" fill="white" stroke="#8b5cf6" stroke-width="2"/>
+        <circle cx="90" cy="52" r="4.5" fill="#8b5cf6"/>
+        <circle cx="92" cy="50" r="1.5" fill="white"/>
+        <!-- Beak -->
+        <polygon points="80,58 77,64 83,64" fill="#f59e0b"/>
+        <!-- Ear tufts -->
+        <polygon points="60,36 64,44 56,44" fill="#8b5cf6" opacity="0.5"/>
+        <polygon points="100,36 96,44 104,44" fill="#8b5cf6" opacity="0.5"/>
+        <!-- Wings folded -->
+        <ellipse cx="56" cy="80" rx="8" ry="18" fill="#8b5cf6" opacity="0.1" transform="rotate(-10,56,80)"/>
+        <ellipse cx="104" cy="80" rx="8" ry="18" fill="#8b5cf6" opacity="0.1" transform="rotate(10,104,80)"/>
+      </svg>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #5b21b6; font-size: 1.1rem;">C) Coruja + Livro</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.85rem;">Coruja simpática pousada num livro aberto. Liga conhecimento + educação. Cores: Violeta + Âmbar.</p>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top: 2.5rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; border: 1px solid #e2e8f0;">
+  <h3 style="margin: 0 0 0.75rem; font-size: 0.95rem; color: #334155;">Resumo das abordagens:</h3>
+  <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="padding: 0.5rem; font-weight: 600; color: #6366f1;">A) Geométrica</td>
+      <td style="padding: 0.5rem; color: #64748b;">Reconhecível · Académica · Funciona em todos os tamanhos</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #e2e8f0;">
+      <td style="padding: 0.5rem; font-weight: 600; color: #0ea5e9;">B) Abstracta</td>
+      <td style="padding: 0.5rem; color: #64748b;">Ultra minimal · Memorável · Melhor como ícone pequeno</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem; font-weight: 600; color: #8b5cf6;">C) Coruja + Livro</td>
+      <td style="padding: 0.5rem; color: #64748b;">Narrativa visual · Liga educação · Mais detalhada</td>
+    </tr>
+  </table>
+</div>

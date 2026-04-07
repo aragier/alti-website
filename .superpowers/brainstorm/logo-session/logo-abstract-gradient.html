@@ -1,0 +1,217 @@
+<h2>Coruja Abstracta — Só Gradiente</h2>
+<p class="subtitle">Abordagem completamente diferente. A coruja é sugerida pela forma, não desenhada. Clica na favorita.</p>
+
+<div class="cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+
+  <!-- A: Two gradient circles = owl eyes, minimal beak -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gA1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#6366f1"/>
+            <stop offset="100%" style="stop-color:#ec4899"/>
+          </linearGradient>
+          <linearGradient id="gA2" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#8b5cf6"/>
+            <stop offset="100%" style="stop-color:#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <!-- Two overlapping gradient circles = owl eyes -->
+        <circle cx="50" cy="65" r="35" fill="url(#gA1)" opacity="0.85"/>
+        <circle cx="90" cy="65" r="35" fill="url(#gA2)" opacity="0.85"/>
+        <!-- White pupils -->
+        <circle cx="50" cy="65" r="12" fill="white"/>
+        <circle cx="90" cy="65" r="12" fill="white"/>
+        <!-- Tiny dot pupils -->
+        <circle cx="54" cy="63" r="5" fill="#1e1b4b"/>
+        <circle cx="94" cy="63" r="5" fill="#1e1b4b"/>
+        <!-- Minimal beak - just a small V -->
+        <path d="M66,88 L70,96 L74,88" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Subtle ear tufts -->
+        <path d="M22,38 L30,22" stroke="url(#gA1)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+        <path d="M18,44 L24,30" stroke="url(#gA1)" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+        <path d="M118,38 L110,22" stroke="url(#gA2)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+        <path d="M122,44 L116,30" stroke="url(#gA2)" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gA1s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#ec4899"/></linearGradient><linearGradient id="gA2s" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#8b5cf6"/><stop offset="100%" style="stop-color:#06b6d4"/></linearGradient></defs>
+          <circle cx="50" cy="65" r="35" fill="url(#gA1s)" opacity="0.85"/>
+          <circle cx="90" cy="65" r="35" fill="url(#gA2s)" opacity="0.85"/>
+          <circle cx="50" cy="65" r="12" fill="white"/><circle cx="90" cy="65" r="12" fill="white"/>
+          <circle cx="54" cy="63" r="5" fill="#1e1b4b"/><circle cx="94" cy="63" r="5" fill="#1e1b4b"/>
+          <path d="M66,88 L70,96 L74,88" fill="none" stroke="#f59e0b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gA1xs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#6366f1"/><stop offset="100%" style="stop-color:#ec4899"/></linearGradient><linearGradient id="gA2xs" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#8b5cf6"/><stop offset="100%" style="stop-color:#06b6d4"/></linearGradient></defs>
+          <circle cx="50" cy="65" r="35" fill="url(#gA1xs)" opacity="0.85"/>
+          <circle cx="90" cy="65" r="35" fill="url(#gA2xs)" opacity="0.85"/>
+          <circle cx="50" cy="65" r="12" fill="white"/><circle cx="90" cy="65" r="12" fill="white"/>
+          <circle cx="54" cy="63" r="5" fill="#1e1b4b"/><circle cx="94" cy="63" r="5" fill="#1e1b4b"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #4338ca; font-size: 1.05rem;">A) Dois círculos gradiente</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Olhos = dois gradientes que se cruzam. Rosa→Indigo + Cyan→Violeta. Bico mínimo. Estilo Figma/Notion.</p>
+    </div>
+  </div>
+
+  <!-- B: Single gradient silhouette -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gB1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#7c3aed"/>
+            <stop offset="50%" style="stop-color:#2563eb"/>
+            <stop offset="100%" style="stop-color:#06b6d4"/>
+          </linearGradient>
+        </defs>
+        <!-- Owl silhouette as single gradient shape -->
+        <path d="M40,18 L48,38 L28,48 L28,100 Q28,120 50,124 L70,128 L90,124 Q112,120 112,100 L112,48 L92,38 L100,18 L88,34 L70,28 L52,34 Z" fill="url(#gB1)"/>
+        <!-- Negative space eyes -->
+        <rect x="38" y="52" rx="8" width="24" height="22" fill="white"/>
+        <circle cx="50" cy="63" r="5" fill="#2563eb"/>
+        <circle cx="52" cy="61" r="1.8" fill="white"/>
+        <rect x="78" y="52" rx="8" width="24" height="22" fill="white"/>
+        <circle cx="90" cy="63" r="5" fill="#06b6d4"/>
+        <circle cx="92" cy="61" r="1.8" fill="white"/>
+        <!-- Negative space beak -->
+        <path d="M70,78 L65,86 L75,86 Z" fill="white" opacity="0.9"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gB1s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="50%" style="stop-color:#2563eb"/><stop offset="100%" style="stop-color:#06b6d4"/></linearGradient></defs>
+          <path d="M40,18 L48,38 L28,48 L28,100 Q28,120 50,124 L70,128 L90,124 Q112,120 112,100 L112,48 L92,38 L100,18 L88,34 L70,28 L52,34 Z" fill="url(#gB1s)"/>
+          <rect x="38" y="52" rx="8" width="24" height="22" fill="white"/><circle cx="50" cy="63" r="6" fill="#2563eb"/>
+          <rect x="78" y="52" rx="8" width="24" height="22" fill="white"/><circle cx="90" cy="63" r="6" fill="#06b6d4"/>
+          <path d="M70,78 L65,86 L75,86 Z" fill="white" opacity="0.9"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gB1xs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="50%" style="stop-color:#2563eb"/><stop offset="100%" style="stop-color:#06b6d4"/></linearGradient></defs>
+          <path d="M40,18 L48,38 L28,48 L28,100 Q28,120 50,124 L70,128 L90,124 Q112,120 112,100 L112,48 L92,38 L100,18 L88,34 L70,28 L52,34 Z" fill="url(#gB1xs)"/>
+          <rect x="38" y="52" rx="8" width="24" height="22" fill="white"/><circle cx="50" cy="63" r="6" fill="#2563eb"/>
+          <rect x="78" y="52" rx="8" width="24" height="22" fill="white"/><circle cx="90" cy="63" r="6" fill="#06b6d4"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #5b21b6; font-size: 1.05rem;">B) Silhueta gradiente única</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Uma forma sólida gradiente (Violeta→Azul→Cyan). Olhos e bico em espaço negativo branco. Muito forte como ícone.</p>
+    </div>
+  </div>
+
+  <!-- C: Gradient swoosh/wing that forms owl -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gC1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f59e0b"/>
+            <stop offset="40%" style="stop-color:#ef4444"/>
+            <stop offset="100%" style="stop-color:#7c3aed"/>
+          </linearGradient>
+          <linearGradient id="gC2" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#06b6d4"/>
+            <stop offset="100%" style="stop-color:#7c3aed"/>
+          </linearGradient>
+        </defs>
+        <!-- Left wing/swoosh -->
+        <path d="M70,28 Q20,28 18,75 Q16,110 50,120 Q60,108 58,80 Q56,50 70,42 Z" fill="url(#gC1)" opacity="0.9"/>
+        <!-- Right wing/swoosh -->
+        <path d="M70,28 Q120,28 122,75 Q124,110 90,120 Q80,108 82,80 Q84,50 70,42 Z" fill="url(#gC2)" opacity="0.9"/>
+        <!-- Eyes in the overlap zone -->
+        <circle cx="55" cy="65" r="10" fill="white"/>
+        <circle cx="57" cy="63" r="4" fill="#1e1b4b"/>
+        <circle cx="58.5" cy="62" r="1.5" fill="white"/>
+        <circle cx="85" cy="65" r="10" fill="white"/>
+        <circle cx="87" cy="63" r="4" fill="#1e1b4b"/>
+        <circle cx="88.5" cy="62" r="1.5" fill="white"/>
+        <!-- Beak -->
+        <path d="M70,78 L67,84 L73,84 Z" fill="white" opacity="0.85"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gC1s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="40%" style="stop-color:#ef4444"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient><linearGradient id="gC2s" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#06b6d4"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient></defs>
+          <path d="M70,28 Q20,28 18,75 Q16,110 50,120 Q60,108 58,80 Q56,50 70,42 Z" fill="url(#gC1s)" opacity="0.9"/>
+          <path d="M70,28 Q120,28 122,75 Q124,110 90,120 Q80,108 82,80 Q84,50 70,42 Z" fill="url(#gC2s)" opacity="0.9"/>
+          <circle cx="55" cy="65" r="10" fill="white"/><circle cx="57" cy="63" r="5" fill="#1e1b4b"/>
+          <circle cx="85" cy="65" r="10" fill="white"/><circle cx="87" cy="63" r="5" fill="#1e1b4b"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gC1xs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#f59e0b"/><stop offset="40%" style="stop-color:#ef4444"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient><linearGradient id="gC2xs" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#06b6d4"/><stop offset="100%" style="stop-color:#7c3aed"/></linearGradient></defs>
+          <path d="M70,28 Q20,28 18,75 Q16,110 50,120 Q60,108 58,80 Q56,50 70,42 Z" fill="url(#gC1xs)" opacity="0.9"/>
+          <path d="M70,28 Q120,28 122,75 Q124,110 90,120 Q80,108 82,80 Q84,50 70,42 Z" fill="url(#gC2xs)" opacity="0.9"/>
+          <circle cx="55" cy="65" r="10" fill="white"/><circle cx="57" cy="63" r="5" fill="#1e1b4b"/>
+          <circle cx="85" cy="65" r="10" fill="white"/><circle cx="87" cy="63" r="5" fill="#1e1b4b"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #7c3aed; font-size: 1.05rem;">C) Asas em gradiente duplo</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Duas curvas/asas formam a coruja. Âmbar→Vermelho→Violeta + Cyan→Violeta. Olhos no centro. Muito orgânico.</p>
+    </div>
+  </div>
+
+  <!-- D: Single gradient blob with cutout eyes -->
+  <div class="card" data-choice="d" onclick="toggleSelect(this)" style="padding: 2rem; text-align: center; cursor: pointer; border-radius: 14px; border: 2px solid #e2e8f0; transition: all 0.2s;">
+    <div style="margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; align-items: flex-end;">
+      <svg width="130" height="130" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="gD1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0ea5e9"/>
+            <stop offset="100%" style="stop-color:#6366f1"/>
+          </linearGradient>
+          <mask id="owlMask">
+            <rect width="140" height="140" fill="white"/>
+            <!-- Cut out eyes -->
+            <circle cx="52" cy="62" r="14" fill="black"/>
+            <circle cx="88" cy="62" r="14" fill="black"/>
+            <!-- Cut out beak -->
+            <path d="M70,80 L64,92 L76,92 Z" fill="black"/>
+          </mask>
+        </defs>
+        <!-- Smooth rounded owl shape with gradient, eyes cut out -->
+        <path d="M36,16 L48,36 Q28,42 26,68 L26,98 Q26,124 70,128 Q114,124 114,98 L114,68 Q112,42 92,36 L104,16 L88,32 Q78,26 70,26 Q62,26 52,32 Z" fill="url(#gD1)" mask="url(#owlMask)"/>
+        <!-- Pupils floating in the cutout -->
+        <circle cx="56" cy="60" r="5.5" fill="#1e1b4b"/>
+        <circle cx="57.5" cy="58.5" r="2" fill="white"/>
+        <circle cx="92" cy="60" r="5.5" fill="#1e1b4b"/>
+        <circle cx="93.5" cy="58.5" r="2" fill="white"/>
+      </svg>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: center;">
+        <span style="font-size: 0.65rem; color: #94a3b8;">Ícones:</span>
+        <svg width="40" height="40" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gD1s" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0ea5e9"/><stop offset="100%" style="stop-color:#6366f1"/></linearGradient>
+          <mask id="owlMasks"><rect width="140" height="140" fill="white"/><circle cx="52" cy="62" r="14" fill="black"/><circle cx="88" cy="62" r="14" fill="black"/><path d="M70,80 L64,92 L76,92 Z" fill="black"/></mask></defs>
+          <path d="M36,16 L48,36 Q28,42 26,68 L26,98 Q26,124 70,128 Q114,124 114,98 L114,68 Q112,42 92,36 L104,16 L88,32 Q78,26 70,26 Q62,26 52,32 Z" fill="url(#gD1s)" mask="url(#owlMasks)"/>
+          <circle cx="56" cy="60" r="6" fill="#1e1b4b"/><circle cx="57.5" cy="58.5" r="2.5" fill="white"/>
+          <circle cx="92" cy="60" r="6" fill="#1e1b4b"/><circle cx="93.5" cy="58.5" r="2.5" fill="white"/>
+        </svg>
+        <svg width="24" height="24" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+          <defs><linearGradient id="gD1xs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0ea5e9"/><stop offset="100%" style="stop-color:#6366f1"/></linearGradient>
+          <mask id="owlMaskxs"><rect width="140" height="140" fill="white"/><circle cx="52" cy="62" r="14" fill="black"/><circle cx="88" cy="62" r="14" fill="black"/><path d="M70,80 L64,92 L76,92 Z" fill="black"/></mask></defs>
+          <path d="M36,16 L48,36 Q28,42 26,68 L26,98 Q26,124 70,128 Q114,124 114,98 L114,68 Q112,42 92,36 L104,16 L88,32 Q78,26 70,26 Q62,26 52,32 Z" fill="url(#gD1xs)" mask="url(#owlMaskxs)"/>
+          <circle cx="56" cy="60" r="6" fill="#1e1b4b"/>
+          <circle cx="92" cy="60" r="6" fill="#1e1b4b"/>
+        </svg>
+      </div>
+    </div>
+    <div>
+      <h3 style="margin: 0 0 0.25rem; color: #4338ca; font-size: 1.05rem;">D) Gradiente com olhos recortados</h3>
+      <p style="margin: 0; color: #64748b; font-size: 0.8rem;">Forma fluída Sky→Indigo. Olhos e bico recortados (espaço negativo). Pupilas flutuantes. Muito moderno.</p>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top: 2rem; padding: 1.25rem; background: #faf5ff; border-radius: 10px; border: 1px solid #e9d5ff;">
+  <p style="margin: 0; color: #6b21a8; font-size: 0.85rem;">
+    ✨ <strong>Nova direção:</strong> Sem contornos, sem detalhes. A coruja emerge apenas da cor e da forma. Quanto menos elementos, mais memorável.
+  </p>
+</div>
