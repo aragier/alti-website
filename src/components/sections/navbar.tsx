@@ -32,16 +32,6 @@ export function Navbar() {
           {/* Language toggle */}
           <div className="flex gap-1 bg-gray-100 rounded-lg p-0.5">
             <button
-              onClick={() => setLocale("pt")}
-              className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
-                locale === "pt"
-                  ? "bg-blue-800 text-white shadow-sm"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
-            >
-              PT
-            </button>
-            <button
               onClick={() => setLocale("en")}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
                 locale === "en"
@@ -50,6 +40,16 @@ export function Navbar() {
               }`}
             >
               EN
+            </button>
+            <button
+              onClick={() => setLocale("pt")}
+              className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
+                locale === "pt"
+                  ? "bg-blue-800 text-white shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              PT
             </button>
           </div>
 
@@ -98,20 +98,20 @@ export function Navbar() {
 
           <div className="flex gap-1 bg-gray-100 rounded-lg p-0.5 w-fit">
             <button
-              onClick={() => setLocale("pt")}
-              className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
-                locale === "pt" ? "bg-blue-800 text-white" : "text-gray-500"
-              }`}
-            >
-              PT
-            </button>
-            <button
               onClick={() => setLocale("en")}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
                 locale === "en" ? "bg-blue-800 text-white" : "text-gray-500"
               }`}
             >
               EN
+            </button>
+            <button
+              onClick={() => setLocale("pt")}
+              className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
+                locale === "pt" ? "bg-blue-800 text-white" : "text-gray-500"
+              }`}
+            >
+              PT
             </button>
           </div>
 

@@ -310,8 +310,8 @@ export const I18nContext = createContext<{
   t: Dictionary;
   setLocale: (locale: Locale) => void;
 }>({
-  locale: "pt",
-  t: dictionaries.pt,
+  locale: "en",
+  t: dictionaries.en,
   setLocale: () => {},
 });
 

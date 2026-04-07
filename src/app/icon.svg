@@ -1,0 +1,32 @@
+<svg viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="c">
+      <circle cx="70" cy="70" r="70"/>
+    </clipPath>
+  </defs>
+  <!-- Light blue circle background (original colour) -->
+  <circle cx="70" cy="70" r="70" fill="#dbeafe"/>
+  <g clip-path="url(#c)">
+    <!-- Ear tufts -->
+    <path d="M42,38 L48,16 L56,38" fill="#dbeafe"/>
+    <path d="M84,38 L92,16 L98,38" fill="#dbeafe"/>
+    <!-- White body -->
+    <rect x="30" y="34" width="80" height="82" rx="20" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+    <!-- Left eye -->
+    <rect x="38" y="44" rx="9" width="26" height="26" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+    <circle cx="51" cy="57" r="7" fill="#2563eb"/>
+    <circle cx="53" cy="55" r="2.5" fill="white"/>
+    <!-- Right eye -->
+    <rect x="76" y="44" rx="9" width="26" height="26" fill="white" stroke="#2563eb" stroke-width="2.5"/>
+    <circle cx="89" cy="57" r="7" fill="#2563eb"/>
+    <circle cx="91" cy="55" r="2.5" fill="white"/>
+    <!-- Beak -->
+    <path d="M70,74 L64,84 L76,84 Z" fill="#f59e0b" stroke="#2563eb" stroke-width="1"/>
+    <!-- Wing hints -->
+    <path d="M36,76 Q42,84 36,92" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+    <path d="M104,76 Q98,84 104,92" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+    <!-- Feet -->
+    <path d="M50,116 L44,130 M50,116 L50,130 M50,116 L56,130" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M90,116 L84,130 M90,116 L90,130 M90,116 L96,130" stroke="#2563eb" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+</svg>
