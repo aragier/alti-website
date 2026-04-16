@@ -16,9 +16,42 @@ export const dictionaries = {
       badge: "Organizar o ensino não precisa de ser difícil",
       title: "A sua sala de aula,\norganizada digitalmente",
       subtitle:
-        "Gestão de turmas, assiduidade, planeamento e calendário. Funciona offline. Experimente as funcionalidades abaixo — e entre na lista de espera para ser dos primeiros a usar.",
+        "Criação de testes, gestão de turmas, assiduidade, planeamento e calendário. Experimente as funcionalidades abaixo — e entre na lista de espera para ser dos primeiros a usar.",
       cta: "Inscrever na lista de espera",
       explore: "↓ Explorar",
+    },
+    testes: {
+      badge: "Criação de Testes",
+      title: "Testes bem formatados,\nautomaticamente",
+      description:
+        "Crie testes profissionais com um clique. Cabeçalho, cotações e numeração aplicados automaticamente — prontos para exportar em PDF e imprimir.",
+      checks: [
+        "Layout profissional, pronto a imprimir",
+        "Cabeçalho, cotações e numeração automáticos",
+        "Totalmente personalizável (escola, logo, campos)",
+        "Exportação direta para PDF",
+      ],
+      headerSchool: "AGRUPAMENTO DE ESCOLAS",
+      headerSub: "Escola Solidária",
+      docTitle: "Ficha de Avaliação de Matemática — Teste 1",
+      docYear: "Ano: 7.º",
+      fieldName: "Nome:",
+      fieldNumber: "N.º:",
+      fieldClass: "Turma:",
+      fieldTeacher: "Professor(a): Ana Martins",
+      fieldDateDuration: "Data: 4 Abril 2026  |  Duração: 90 min",
+      groupTitle: "Grupo I",
+      groupDesc: "Lê atentamente cada questão antes de responder.",
+      q1: "Resolve a equação e indica o conjunto-solução.",
+      q1Domain: "Álgebra · Equações",
+      q2: "Classifica cada afirmação como Verdadeira (V) ou Falsa (F).",
+      q2Domain: "Números e Operações",
+      q3: "Determina o valor numérico da função no ponto dado.",
+      q3Domain: "Funções",
+      footerYear: "Ano Letivo 2025/2026",
+      footerPage: "Pág. 1/2",
+      closing: "Bom Trabalho!",
+      previewHint: "📄 Pré-visualização — exportável em PDF",
     },
     turmas: {
       badge: "Gestão de Turmas",
@@ -100,14 +133,6 @@ export const dictionaries = {
       meetings: "Reuniões",
       activities: "Atividades",
     },
-    offline: {
-      title: "Funciona Offline",
-      description:
-        "Sem internet? Sem problema. Todas as funcionalidades disponíveis offline. Os dados sincronizam automaticamente quando voltar a ter ligação.",
-      stat1: "Funcional Offline",
-      stat2: "Sincronização",
-      stat3: "Instalável",
-    },
     cta: {
       title: "Seja dos primeiros\na experimentar",
       subtitle: "Estamos a preparar tudo. Deixe o seu email e avisamos assim que estiver disponível.",
@@ -145,9 +170,42 @@ export const dictionaries = {
       badge: "Organized teaching does not need to be hard",
       title: "Your classroom,\ndigitally organized",
       subtitle:
-        "Class management, attendance, planning and calendar. Works offline. Try the features below — and join the waitlist to be among the first to use it.",
+        "Test creation, class management, attendance, planning and calendar. Try the features below — and join the waitlist to be among the first to use it.",
       cta: "Join Waitlist",
       explore: "↓ Explore",
+    },
+    testes: {
+      badge: "Test Creation",
+      title: "Well-formatted tests,\nautomatically",
+      description:
+        "Create professional tests in a single click. Header, scoring and numbering applied automatically — ready to export as PDF and print.",
+      checks: [
+        "Professional layout, print-ready",
+        "Automatic header, scoring and numbering",
+        "Fully customizable (school, logo, fields)",
+        "Direct PDF export",
+      ],
+      headerSchool: "SCHOOL GROUPING",
+      headerSub: "Solidária School",
+      docTitle: "Mathematics Assessment — Test 1",
+      docYear: "Year: 7th",
+      fieldName: "Name:",
+      fieldNumber: "No.:",
+      fieldClass: "Class:",
+      fieldTeacher: "Teacher: Ana Martins",
+      fieldDateDuration: "Date: April 4, 2026  |  Duration: 90 min",
+      groupTitle: "Group I",
+      groupDesc: "Read each question carefully before answering.",
+      q1: "Solve the equation and state the solution set.",
+      q1Domain: "Algebra · Equations",
+      q2: "Classify each statement as True (T) or False (F).",
+      q2Domain: "Numbers and Operations",
+      q3: "Find the value of the function at the given point.",
+      q3Domain: "Functions",
+      footerYear: "School Year 2025/2026",
+      footerPage: "Pg. 1/2",
+      closing: "Good Work!",
+      previewHint: "📄 Preview — exportable as PDF",
     },
     turmas: {
       badge: "Class Management",
@@ -229,14 +287,6 @@ export const dictionaries = {
       meetings: "Meetings",
       activities: "Activities",
     },
-    offline: {
-      title: "Works Offline",
-      description:
-        "No internet? No problem. All features available offline. Data syncs automatically when you reconnect.",
-      stat1: "Fully Offline",
-      stat2: "Auto Sync",
-      stat3: "Installable",
-    },
     cta: {
       title: "Be among the first\nto try it",
       subtitle: "We're getting everything ready. Leave your email and we'll let you know as soon as it's available.",
@@ -268,6 +318,19 @@ export const dictionaries = {
 export type Dictionary = {
   nav: { features: string; howItWorks: string; about: string; cta: string };
   hero: { badge: string; title: string; subtitle: string; cta: string; explore: string };
+  testes: {
+    badge: string; title: string; description: string; checks: string[];
+    headerSchool: string; headerSub: string;
+    docTitle: string; docYear: string;
+    fieldName: string; fieldNumber: string; fieldClass: string;
+    fieldTeacher: string; fieldDateDuration: string;
+    groupTitle: string; groupDesc: string;
+    q1: string; q1Domain: string;
+    q2: string; q2Domain: string;
+    q3: string; q3Domain: string;
+    footerYear: string; footerPage: string; closing: string;
+    previewHint: string;
+  };
   turmas: {
     badge: string; title: string; description: string; checks: string[];
     myClasses: string; newClass: string; students: string; attendance: string;
@@ -292,7 +355,6 @@ export type Dictionary = {
     weekdays: string[]; months: string[];
     lessons: string; meetings: string; activities: string;
   };
-  offline: { title: string; description: string; stat1: string; stat2: string; stat3: string };
   cta: {
     title: string; subtitle: string; button: string;
     placeholder: string; success: string; successSub: string; count: string;

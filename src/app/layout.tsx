@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Profeli — Ferramenta Digital para Professores",
   description:
-    "Gestão de turmas, assiduidade, planeamento e calendário. Funciona offline. A ferramenta completa para professores em Portugal.",
+    "Criação de testes, gestão de turmas, assiduidade, planeamento e calendário. A ferramenta completa para professores em Portugal.",
 };
 
 export default function RootLayout({
