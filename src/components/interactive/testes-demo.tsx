@@ -9,7 +9,7 @@ export function TestesDemo() {
   return (
     <div className="relative">
       {/* Floating PDF chip */}
-      <div className="absolute -top-3 -right-2 z-10 flex items-center gap-1.5 bg-rose-600 text-white px-3 py-1.5 rounded-full text-[11px] font-bold shadow-lg">
+      <div className="absolute -top-3 -right-2 z-10 flex items-center gap-1.5 bg-accent text-white px-3 py-1.5 rounded-full text-[11px] font-bold shadow-lg">
         <Download size={12} />
         PDF
       </div>
@@ -101,7 +101,7 @@ export function TestesDemo() {
         </div>
       </div>
 
-      <p className="mt-4 text-center text-xs text-gray-400 italic font-sans">
+      <p className="mt-4 text-center text-xs text-ink3 italic font-sans">
         {t.testes.previewHint}
       </p>
     </div>

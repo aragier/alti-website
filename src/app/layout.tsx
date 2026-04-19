@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
+const sans = Manrope({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const serif = Fraunces({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -19,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased`}>
+    <html lang="pt" className={`${sans.variable} ${serif.variable} scroll-smooth`}>
+      <body className="font-sans bg-paper text-ink antialiased">
         {children}
       </body>
     </html>

@@ -31,26 +31,26 @@ export function Hero() {
   }
 
   return (
-    <section className="bg-gradient-to-b from-blue-50 via-indigo-50/60 to-indigo-50/30 py-24 md:py-32 px-6 text-center">
+    <section className="bg-paper py-24 md:py-32 px-6 text-center">
       <div className="mx-auto max-w-2xl">
         <div className="flex justify-center mb-6">
           <OwlLogo width={80} height={80} />
         </div>
 
-        <span className="inline-block text-xs font-semibold text-blue-600 uppercase tracking-widest mb-4">
+        <span className="inline-block text-xs font-semibold text-accent uppercase tracking-widest mb-4">
           {t.hero.badge}
         </span>
 
-        <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight whitespace-pre-line">
+        <h1 className="font-serif text-4xl md:text-5xl font-semibold text-ink leading-tight whitespace-pre-line">
           {t.hero.title}
         </h1>
 
-        <p className="mt-6 text-lg text-gray-500 leading-relaxed max-w-lg mx-auto">
+        <p className="mt-6 text-lg text-ink2 leading-relaxed max-w-lg mx-auto">
           {t.hero.subtitle}
         </p>
 
         {submitted ? (
-          <div className="mt-8 inline-flex items-center gap-2 bg-green-50 text-green-700 px-6 py-3 rounded-xl border border-green-200 font-semibold animate-fade-in">
+          <div className="mt-8 inline-flex items-center gap-2 bg-sage-bg text-sage-ink px-6 py-3 rounded-xl border border-line font-semibold animate-fade-in">
             <span>✓</span> {t.cta.success}
           </div>
         ) : (
@@ -65,12 +65,12 @@ export function Hero() {
               onChange={(e) => setEmail(e.target.value)}
               placeholder={t.cta.placeholder}
               disabled={loading}
-              className="flex-1 px-5 py-3.5 rounded-xl border-2 border-indigo-100 bg-white text-base focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-400 transition-all placeholder:text-gray-400 disabled:opacity-50"
+              className="flex-1 px-5 py-3.5 rounded-xl border border-line bg-white text-base text-ink focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent transition-all placeholder:text-ink3 disabled:opacity-50"
             />
             <button
               type="submit"
               disabled={loading}
-              className="bg-blue-800 text-white px-8 py-3.5 rounded-xl text-base font-semibold hover:bg-blue-900 transition-colors whitespace-nowrap disabled:opacity-50"
+              className="bg-accent text-white px-8 py-3.5 rounded-xl text-base font-semibold hover:bg-accent-strong transition-colors whitespace-nowrap disabled:opacity-50"
             >
               {loading ? "..." : t.hero.cta}
             </button>
@@ -78,12 +78,12 @@ export function Hero() {
         )}
 
         {error && (
-          <p className="mt-3 text-sm text-red-500">{error}</p>
+          <p className="mt-3 text-sm text-terra-ink">{error}</p>
         )}
 
         <a
           href="#funcionalidades"
-          className="inline-block mt-6 text-gray-500 hover:text-gray-700 text-base font-medium transition-colors"
+          className="inline-block mt-6 text-ink3 hover:text-ink2 text-base font-medium transition-colors"
         >
           {t.hero.explore}
         </a>

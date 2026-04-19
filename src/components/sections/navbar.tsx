@@ -10,33 +10,33 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-black/[0.04]">
+    <nav className="sticky top-0 z-50 bg-paper/90 backdrop-blur-md border-b border-line">
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-4">
-        <a href="#" className="flex items-center gap-2 text-xl font-extrabold text-blue-800">
+        <a href="#" className="flex items-center gap-2 text-xl font-serif font-semibold text-ink">
           <OwlLogo width={32} height={32} />
           Profeli
         </a>
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#funcionalidades" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+          <a href="#funcionalidades" className="text-sm text-ink2 hover:text-ink transition-colors">
             {t.nav.features}
           </a>
-          <a href="#como-funciona" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+          <a href="#como-funciona" className="text-sm text-ink2 hover:text-ink transition-colors">
             {t.nav.howItWorks}
           </a>
-          <a href="#sobre" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
+          <a href="#sobre" className="text-sm text-ink2 hover:text-ink transition-colors">
             {t.nav.about}
           </a>
 
           {/* Language toggle */}
-          <div className="flex gap-1 bg-gray-100 rounded-lg p-0.5">
+          <div className="flex gap-1 bg-paper2 rounded-lg p-0.5 border border-line">
             <button
               onClick={() => setLocale("en")}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
                 locale === "en"
-                  ? "bg-blue-800 text-white shadow-sm"
-                  : "text-gray-500 hover:text-gray-700"
+                  ? "bg-accent text-white shadow-sm"
+                  : "text-ink3 hover:text-ink2"
               }`}
             >
               EN
@@ -45,8 +45,8 @@ export function Navbar() {
               onClick={() => setLocale("pt")}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
                 locale === "pt"
-                  ? "bg-blue-800 text-white shadow-sm"
-                  : "text-gray-500 hover:text-gray-700"
+                  ? "bg-accent text-white shadow-sm"
+                  : "text-ink3 hover:text-ink2"
               }`}
             >
               PT
@@ -55,7 +55,7 @@ export function Navbar() {
 
           <a
             href="#cta"
-            className="bg-blue-800 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-900 transition-colors"
+            className="bg-accent text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-accent-strong transition-colors"
           >
             {t.nav.cta}
           </a>
@@ -63,7 +63,7 @@ export function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden p-2 text-gray-600"
+          className="md:hidden p-2 text-ink2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Menu"
         >
@@ -73,34 +73,34 @@ export function Navbar() {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-gray-100 bg-white px-6 py-4 space-y-4">
+        <div className="md:hidden border-t border-line bg-paper px-6 py-4 space-y-4">
           <a
             href="#funcionalidades"
-            className="block text-sm text-gray-600 hover:text-gray-900"
+            className="block text-sm text-ink2 hover:text-ink"
             onClick={() => setMobileOpen(false)}
           >
             {t.nav.features}
           </a>
           <a
             href="#como-funciona"
-            className="block text-sm text-gray-600 hover:text-gray-900"
+            className="block text-sm text-ink2 hover:text-ink"
             onClick={() => setMobileOpen(false)}
           >
             {t.nav.howItWorks}
           </a>
           <a
             href="#sobre"
-            className="block text-sm text-gray-600 hover:text-gray-900"
+            className="block text-sm text-ink2 hover:text-ink"
             onClick={() => setMobileOpen(false)}
           >
             {t.nav.about}
           </a>
 
-          <div className="flex gap-1 bg-gray-100 rounded-lg p-0.5 w-fit">
+          <div className="flex gap-1 bg-paper2 rounded-lg p-0.5 w-fit border border-line">
             <button
               onClick={() => setLocale("en")}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
-                locale === "en" ? "bg-blue-800 text-white" : "text-gray-500"
+                locale === "en" ? "bg-accent text-white" : "text-ink3"
               }`}
             >
               EN
@@ -108,7 +108,7 @@ export function Navbar() {
             <button
               onClick={() => setLocale("pt")}
               className={`px-3 py-1 rounded-md text-xs font-semibold transition-all ${
-                locale === "pt" ? "bg-blue-800 text-white" : "text-gray-500"
+                locale === "pt" ? "bg-accent text-white" : "text-ink3"
               }`}
             >
               PT
@@ -117,7 +117,7 @@ export function Navbar() {
 
           <a
             href="#cta"
-            className="block bg-blue-800 text-white text-center px-5 py-2.5 rounded-lg text-sm font-semibold"
+            className="block bg-accent text-white text-center px-5 py-2.5 rounded-lg text-sm font-semibold"
             onClick={() => setMobileOpen(false)}
           >
             {t.nav.cta}

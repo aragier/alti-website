@@ -99,28 +99,28 @@ export function AvaliacaoDemo() {
   ];
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)]">
+    <div className="bg-white rounded-2xl p-6 border border-line shadow-[0_8px_32px_rgba(31,42,46,0.04)]">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="font-bold text-base text-gray-900">{t.avaliacao.testInfo}</h3>
-          <p className="text-xs text-gray-500 mt-0.5">{t.avaliacao.testMeta}</p>
+          <h3 className="font-serif font-semibold text-base text-ink">{t.avaliacao.testInfo}</h3>
+          <p className="text-xs text-ink3 mt-0.5">{t.avaliacao.testMeta}</p>
         </div>
-        <div className="bg-green-100 text-green-800 px-3 py-1.5 rounded-lg text-xs font-semibold">
+        <div className="bg-sage-bg text-sage-ink px-3 py-1.5 rounded-lg text-xs font-semibold">
           {corrected}/{students.length} {t.avaliacao.corrected}
         </div>
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 mb-4 bg-gray-100 rounded-lg p-1">
+      <div className="flex gap-1 mb-4 bg-paper2 rounded-lg p-1">
         {tabs.map((tab) => (
           <button
             key={tab.key}
             onClick={() => setActiveTab(tab.key)}
             className={`flex-1 px-3 py-1.5 rounded-md text-xs font-semibold transition-all ${
               activeTab === tab.key
-                ? "bg-white text-gray-900 shadow-sm"
-                : "text-gray-500 hover:text-gray-700"
+                ? "bg-white text-ink shadow-sm"
+                : "text-ink3 hover:text-ink2"
             }`}
           >
             {tab.label}
@@ -149,7 +149,7 @@ export function AvaliacaoDemo() {
         <VistaGrelha notas={notas} onNotaInput={handleNotaInput} />
       )}
 
-      <p className="mt-4 text-center text-xs text-gray-400 italic">
+      <p className="mt-4 text-center text-xs text-ink3 italic">
         {t.avaliacao.interactiveHint}
       </p>
     </div>
@@ -182,9 +182,9 @@ function VistaPorPergunta({
           const isSelected = i === selectedIndex;
           const isComplete = isQuestionComplete(p.id);
 
-          let cls = "border border-gray-300 bg-white text-gray-700";
-          if (isSelected) cls = "bg-blue-600 text-white border border-blue-600";
-          else if (isComplete) cls = "bg-green-100 text-green-800 border border-green-400";
+          let cls = "border border-line bg-white text-ink2";
+          if (isSelected) cls = "bg-accent text-white border border-accent";
+          else if (isComplete) cls = "bg-sage-bg text-sage-ink border border-sage-dot/50";
 
           return (
             <button
@@ -196,7 +196,7 @@ function VistaPorPergunta({
             </button>
           );
         })}
-        <span className="text-[11px] text-gray-400 flex items-center ml-2">
+        <span className="text-[11px] text-ink3 flex items-center ml-2">
           P{pergunta.numero} · {pergunta.cotacao} pts
         </span>
       </div>
@@ -212,12 +212,12 @@ function VistaPorPergunta({
               key={student.id}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border transition-all ${
                 hasValue
-                  ? "border-gray-200 bg-white"
-                  : "border-amber-200 bg-amber-50/50"
+                  ? "border-line bg-white"
+                  : "border-amber-bg bg-amber-bg/30"
               }`}
             >
-              <span className="w-6 text-xs text-gray-400 font-medium">{student.numero}</span>
-              <span className="flex-1 text-sm text-gray-900 font-medium">{student.name}</span>
+              <span className="w-6 text-xs text-ink3 font-medium">{student.numero}</span>
+              <span className="flex-1 text-sm text-ink font-medium">{student.name}</span>
               <input
                 type="number"
                 min={0}
@@ -225,12 +225,12 @@ function VistaPorPergunta({
                 step="any"
                 value={val ?? ""}
                 onChange={(e) => onNotaInput(student.id, pergunta.id, e.target.value, pergunta.cotacao)}
-                className={`w-[52px] rounded-lg border px-1.5 py-1 text-center text-sm focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-400 ${
-                  hasValue ? "border-gray-200 bg-green-50/50" : "border-amber-300 bg-white"
+                className={`w-[52px] rounded-lg border px-1.5 py-1 text-center text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent ${
+                  hasValue ? "border-line bg-sage-bg/40" : "border-amber-dot/60 bg-white"
                 }`}
                 placeholder="—"
               />
-              <span className="text-xs text-gray-400">/ {pergunta.cotacao}</span>
+              <span className="text-xs text-ink3">/ {pergunta.cotacao}</span>
             </div>
           );
         })}
@@ -265,9 +265,9 @@ function VistaPorAluno({
           const isSelected = i === selectedIndex;
           const isDone = isStudentComplete(notas, s.id);
 
-          let cls = "border border-gray-300 bg-white text-gray-700";
-          if (isSelected) cls = "bg-blue-600 text-white border border-blue-600";
-          else if (isDone) cls = "bg-green-100 text-green-800 border border-green-400";
+          let cls = "border border-line bg-white text-ink2";
+          if (isSelected) cls = "bg-accent text-white border border-accent";
+          else if (isDone) cls = "bg-sage-bg text-sage-ink border border-sage-dot/50";
 
           return (
             <button
@@ -292,11 +292,11 @@ function VistaPorAluno({
             <div
               key={p.id}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-xl border transition-all ${
-                hasValue ? "border-gray-200 bg-white" : "border-amber-200 bg-amber-50/50"
+                hasValue ? "border-line bg-white" : "border-amber-bg bg-amber-bg/30"
               }`}
             >
-              <span className="w-14 text-xs text-gray-500 font-medium">P{p.numero}</span>
-              <span className="flex-1 text-xs text-gray-400">{p.cotacao} pts</span>
+              <span className="w-14 text-xs text-ink3 font-medium">P{p.numero}</span>
+              <span className="flex-1 text-xs text-ink3">{p.cotacao} pts</span>
               <input
                 type="number"
                 min={0}
@@ -304,12 +304,12 @@ function VistaPorAluno({
                 step="any"
                 value={val ?? ""}
                 onChange={(e) => onNotaInput(student.id, p.id, e.target.value, p.cotacao)}
-                className={`w-[52px] rounded-lg border px-1.5 py-1 text-center text-sm focus:outline-none focus:ring-2 focus:ring-blue-300 focus:border-blue-400 ${
-                  hasValue ? "border-gray-200 bg-green-50/50" : "border-amber-300 bg-white"
+                className={`w-[52px] rounded-lg border px-1.5 py-1 text-center text-sm focus:outline-none focus:ring-2 focus:ring-accent/30 focus:border-accent ${
+                  hasValue ? "border-line bg-sage-bg/40" : "border-amber-dot/60 bg-white"
                 }`}
                 placeholder="—"
               />
-              <span className="text-xs text-gray-400">/ {p.cotacao}</span>
+              <span className="text-xs text-ink3">/ {p.cotacao}</span>
             </div>
           );
         })}
@@ -320,9 +320,9 @@ function VistaPorAluno({
         className={`mt-3 flex items-center justify-between px-4 py-2.5 rounded-xl text-sm font-bold ${
           complete
             ? nota20 >= 10
-              ? "bg-green-100 text-green-800"
-              : "bg-red-100 text-red-700"
-            : "bg-gray-100 text-gray-600"
+              ? "bg-sage-bg text-sage-ink"
+              : "bg-terra-bg text-terra-ink"
+            : "bg-paper2 text-ink2"
         }`}
       >
         <span>Total: {total} / {COTACAO_TOTAL} pts</span>
@@ -361,20 +361,20 @@ function VistaGrelha({
     <div className="overflow-x-auto -mx-2">
       <table className="w-full border-collapse text-xs">
         <thead>
-          <tr className="bg-gray-50">
-            <th className="sticky left-0 z-10 bg-gray-50 border border-gray-200 px-2 py-2 text-left font-medium text-gray-700 min-w-[100px]">
+          <tr className="bg-paper">
+            <th className="sticky left-0 z-10 bg-paper border border-line px-2 py-2 text-left font-medium text-ink2 min-w-[100px]">
               Aluno
             </th>
             {perguntas.map((p) => (
-              <th key={p.id} className="border border-gray-200 px-1 py-1.5 text-center font-medium text-gray-700 min-w-[46px]">
+              <th key={p.id} className="border border-line px-1 py-1.5 text-center font-medium text-ink2 min-w-[46px]">
                 <div>P{p.numero}</div>
-                <div className="text-[10px] font-normal text-gray-400">{p.cotacao}</div>
+                <div className="text-[10px] font-normal text-ink3">{p.cotacao}</div>
               </th>
             ))}
-            <th className="border border-gray-200 px-2 py-2 text-center font-medium bg-green-50 text-green-800 min-w-[44px]">
+            <th className="border border-line px-2 py-2 text-center font-medium bg-sage-bg text-sage-ink min-w-[44px]">
               Tot
             </th>
-            <th className="border border-gray-200 px-2 py-2 text-center font-medium bg-green-50 text-green-800 min-w-[44px]">
+            <th className="border border-line px-2 py-2 text-center font-medium bg-sage-bg text-sage-ink min-w-[44px]">
               Nota
             </th>
           </tr>
@@ -387,14 +387,14 @@ function VistaGrelha({
             const complete = isStudentComplete(notas, student.id);
 
             return (
-              <tr key={student.id} className="hover:bg-gray-50/50">
-                <td className="sticky left-0 z-10 bg-white border border-gray-200 px-2 py-1 truncate text-gray-900 font-medium min-w-[100px]">
+              <tr key={student.id} className="hover:bg-paper/50">
+                <td className="sticky left-0 z-10 bg-white border border-line px-2 py-1 truncate text-ink font-medium min-w-[100px]">
                   {student.name}
                 </td>
                 {perguntas.map((p) => {
                   const val = notas[student.id]?.[p.id];
                   return (
-                    <td key={p.id} className="border border-gray-200 p-0">
+                    <td key={p.id} className="border border-line p-0">
                       <input
                         type="number"
                         min={0}
@@ -404,22 +404,22 @@ function VistaGrelha({
                         onChange={(e) =>
                           onNotaInput(student.id, p.id, e.target.value, p.cotacao)
                         }
-                        className="w-full px-1 py-1.5 text-center text-xs border-none focus:outline-none focus:ring-1 focus:ring-blue-500 bg-transparent"
+                        className="w-full px-1 py-1.5 text-center text-xs border-none focus:outline-none focus:ring-1 focus:ring-accent bg-transparent"
                         placeholder="—"
                       />
                     </td>
                   );
                 })}
-                <td className="border border-gray-200 px-1 py-1 text-center font-bold bg-green-50 text-green-800">
+                <td className="border border-line px-1 py-1 text-center font-bold bg-sage-bg text-sage-ink">
                   {total}
                 </td>
                 <td
-                  className={`border border-gray-200 px-1 py-1 text-center font-bold ${
+                  className={`border border-line px-1 py-1 text-center font-bold ${
                     complete
                       ? isPositive
-                        ? "text-green-700 bg-green-50"
-                        : "text-red-600 bg-red-50"
-                      : "text-gray-400 bg-gray-50"
+                        ? "text-sage-ink bg-sage-bg/60"
+                        : "text-terra-ink bg-terra-bg/60"
+                      : "text-ink3 bg-paper"
                   }`}
                 >
                   {nota20.toFixed(1)}
@@ -429,19 +429,19 @@ function VistaGrelha({
           })}
         </tbody>
         <tfoot>
-          <tr className="bg-gray-100 font-medium">
-            <td className="sticky left-0 z-10 bg-gray-100 border border-gray-200 px-2 py-2 text-gray-700">
+          <tr className="bg-paper2 font-medium">
+            <td className="sticky left-0 z-10 bg-paper2 border border-line px-2 py-2 text-ink2">
               Média
             </td>
             {avgPerQuestion.map((avg, i) => (
-              <td key={perguntas[i].id} className="border border-gray-200 px-1 py-2 text-center text-gray-600">
+              <td key={perguntas[i].id} className="border border-line px-1 py-2 text-center text-ink2">
                 {avg.toFixed(1)}
               </td>
             ))}
-            <td className="border border-gray-200 px-1 py-2 text-center bg-green-50 font-bold text-green-800">
+            <td className="border border-line px-1 py-2 text-center bg-sage-bg font-bold text-green-800">
               {avgTotal.toFixed(1)}
             </td>
-            <td className="border border-gray-200 px-1 py-2 text-center bg-green-50 font-bold text-green-800">
+            <td className="border border-line px-1 py-2 text-center bg-sage-bg font-bold text-green-800">
               {avgNota.toFixed(1)}
             </td>
           </tr>

@@ -21,22 +21,21 @@ export function TurmasDemo() {
   ];
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)]">
+    <div className="bg-white rounded-2xl p-6 border border-line shadow-[0_8px_32px_rgba(31,42,46,0.04)]">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-bold text-base text-gray-900">{t.turmas.myClasses}</h3>
+        <h3 className="font-serif font-semibold text-base text-ink">{t.turmas.myClasses}</h3>
       </div>
 
-      {/* Turma cards */}
       <div className="grid grid-cols-2 gap-3">
         {turmas.map((turma) => (
           <div
             key={turma.id}
-            className="bg-gray-50 rounded-xl p-4 border border-gray-100 transition-all duration-200 hover:shadow-md hover:border-blue-200"
+            className="bg-paper rounded-xl p-4 border border-line transition-all duration-200 hover:shadow-md hover:border-accent/40"
           >
-            <p className="font-semibold text-sm text-gray-900">{turma.name}</p>
-            <p className="text-xs text-blue-600 mt-0.5">{turma.subject}</p>
+            <p className="font-semibold text-sm text-ink">{turma.name}</p>
+            <p className="text-xs text-accent mt-0.5">{turma.subject}</p>
             <div className="mt-3">
-              <span className="text-xs text-gray-500">
+              <span className="text-xs text-ink3">
                 {turma.students} {t.turmas.students}
               </span>
             </div>

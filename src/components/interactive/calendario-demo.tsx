@@ -29,9 +29,9 @@ const initialEvents: CalendarEvent[] = [
 ];
 
 const eventColors: Record<string, string> = {
-  lesson: "bg-green-500",
-  meeting: "bg-red-500",
-  activity: "bg-amber-500",
+  lesson: "bg-sage-dot",
+  meeting: "bg-terra-dot",
+  activity: "bg-amber-dot",
 };
 
 function getDaysInMonth(year: number, month: number) {
@@ -45,7 +45,7 @@ function getFirstDayOfWeek(year: number, month: number) {
 
 export function CalendarioDemo() {
   const { t } = useI18n();
-  const [month, setMonth] = useState(3); // April (0-indexed)
+  const [month, setMonth] = useState(3);
   const [year, setYear] = useState(2026);
   const [events, setEvents] = useState<CalendarEvent[]>(initialEvents);
   const [selectedDay, setSelectedDay] = useState<number | null>(null);
@@ -88,44 +88,40 @@ export function CalendarioDemo() {
     setEvents([...events, { day, month, year, type }]);
   }
 
-  // Build calendar grid
   const cells: (number | null)[] = [];
   for (let i = 0; i < firstDay; i++) cells.push(null);
   for (let d = 1; d <= daysInMonth; d++) cells.push(d);
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)]">
-      {/* Header */}
+    <div className="bg-white rounded-2xl p-6 border border-line shadow-[0_8px_32px_rgba(31,42,46,0.04)]">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-bold text-base text-gray-900">
+        <h3 className="font-serif font-semibold text-base text-ink">
           {t.calendario.months[month]} {year}
         </h3>
         <div className="flex gap-2">
           <button
             onClick={prevMonth}
-            className="w-8 h-8 bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+            className="w-8 h-8 bg-paper border border-line rounded-lg flex items-center justify-center hover:bg-paper2 transition-colors text-ink2"
           >
             <ChevronLeft size={16} />
           </button>
           <button
             onClick={nextMonth}
-            className="w-8 h-8 bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center hover:bg-gray-100 transition-colors"
+            className="w-8 h-8 bg-paper border border-line rounded-lg flex items-center justify-center hover:bg-paper2 transition-colors text-ink2"
           >
             <ChevronRight size={16} />
           </button>
         </div>
       </div>
 
-      {/* Weekday headers */}
       <div className="grid grid-cols-7 gap-1 text-center mb-1">
         {t.calendario.weekdays.map((day) => (
-          <div key={day} className="text-xs font-semibold text-gray-400 py-2">
+          <div key={day} className="text-xs font-semibold text-ink3 py-2">
             {day}
           </div>
         ))}
       </div>
 
-      {/* Calendar grid */}
       <div className="grid grid-cols-7 gap-1">
         {cells.map((day, i) => {
           if (day === null) {
@@ -142,10 +138,10 @@ export function CalendarioDemo() {
               onClick={() => handleDayClick(day)}
               className={`relative py-2 rounded-lg text-xs transition-all cursor-pointer ${
                 isToday
-                  ? "bg-blue-800 text-white font-bold"
+                  ? "bg-accent text-white font-bold"
                   : isSelected
-                  ? "bg-blue-100 text-blue-800 font-semibold"
-                  : "text-gray-700 hover:bg-blue-50"
+                  ? "bg-accent-soft text-accent-strong font-semibold"
+                  : "text-ink2 hover:bg-paper2"
               }`}
             >
               {day}
@@ -164,16 +160,15 @@ export function CalendarioDemo() {
         })}
       </div>
 
-      {/* Selected day popup */}
       {selectedDay !== null && (
-        <div className="mt-3 p-3 bg-gray-50 rounded-xl border border-gray-100">
-          <p className="text-xs font-semibold text-gray-900 mb-2">
+        <div className="mt-3 p-3 bg-paper rounded-xl border border-line">
+          <p className="text-xs font-semibold text-ink mb-2">
             {selectedDay} {t.calendario.months[month]}
           </p>
           {getEventsForDay(selectedDay).length > 0 ? (
             <div className="space-y-1">
               {getEventsForDay(selectedDay).map((e, i) => (
-                <div key={i} className="flex items-center gap-2 text-xs text-gray-600">
+                <div key={i} className="flex items-center gap-2 text-xs text-ink2">
                   <div className={`w-2 h-2 rounded-full ${eventColors[e.type]}`} />
                   {e.type === "lesson" && t.calendario.lessons}
                   {e.type === "meeting" && t.calendario.meetings}
@@ -182,24 +177,24 @@ export function CalendarioDemo() {
               ))}
             </div>
           ) : (
-            <p className="text-xs text-gray-400 mb-2">—</p>
+            <p className="text-xs text-ink3 mb-2">—</p>
           )}
           <div className="flex gap-2 mt-2">
             <button
               onClick={() => addEvent(selectedDay, "lesson")}
-              className="text-[10px] px-2 py-1 bg-green-100 text-green-700 rounded-md hover:bg-green-200 transition-colors"
+              className="text-[10px] px-2 py-1 bg-sage-bg text-sage-ink rounded-md hover:brightness-95 transition-all"
             >
               + {t.calendario.lessons}
             </button>
             <button
               onClick={() => addEvent(selectedDay, "meeting")}
-              className="text-[10px] px-2 py-1 bg-red-100 text-red-700 rounded-md hover:bg-red-200 transition-colors"
+              className="text-[10px] px-2 py-1 bg-terra-bg text-terra-ink rounded-md hover:brightness-95 transition-all"
             >
               + {t.calendario.meetings}
             </button>
             <button
               onClick={() => addEvent(selectedDay, "activity")}
-              className="text-[10px] px-2 py-1 bg-amber-100 text-amber-700 rounded-md hover:bg-amber-200 transition-colors"
+              className="text-[10px] px-2 py-1 bg-amber-bg text-amber-ink rounded-md hover:brightness-95 transition-all"
             >
               + {t.calendario.activities}
             </button>
@@ -207,18 +202,17 @@ export function CalendarioDemo() {
         </div>
       )}
 
-      {/* Legend */}
       <div className="flex gap-5 justify-center mt-4">
-        <div className="flex items-center gap-1.5 text-xs text-gray-500">
-          <div className="w-2 h-2 rounded-full bg-green-500" />
+        <div className="flex items-center gap-1.5 text-xs text-ink3">
+          <div className="w-2 h-2 rounded-full bg-sage-dot" />
           {t.calendario.lessons}
         </div>
-        <div className="flex items-center gap-1.5 text-xs text-gray-500">
-          <div className="w-2 h-2 rounded-full bg-red-500" />
+        <div className="flex items-center gap-1.5 text-xs text-ink3">
+          <div className="w-2 h-2 rounded-full bg-terra-dot" />
           {t.calendario.meetings}
         </div>
-        <div className="flex items-center gap-1.5 text-xs text-gray-500">
-          <div className="w-2 h-2 rounded-full bg-amber-500" />
+        <div className="flex items-center gap-1.5 text-xs text-ink3">
+          <div className="w-2 h-2 rounded-full bg-amber-dot" />
           {t.calendario.activities}
         </div>
       </div>

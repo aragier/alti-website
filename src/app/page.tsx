@@ -13,6 +13,13 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { Footer } from "@/components/sections/footer";
 import { useI18n } from "@/lib/i18n";
 
+const pill = {
+  amber: "bg-amber-bg text-amber-ink",
+  sage: "bg-sage-bg text-sage-ink",
+  terra: "bg-terra-bg text-terra-ink",
+  plum: "bg-plum-bg text-plum-ink",
+} as const;
+
 function PageContent() {
   const { t } = useI18n();
 
@@ -22,95 +29,70 @@ function PageContent() {
 
       <Hero />
 
-      {/*
-        FLUID TRANSITIONS: Each section's background gradient starts where the
-        previous one ended. No dividers, no lines — just continuous color flow.
-      */}
-
-      {/* Transition: Hero blue → Rose */}
-      <div className="h-10 bg-gradient-to-b from-indigo-50/30 to-rose-50/40" />
-
-      {/* TESTES (Test Creation) — first feature */}
+      {/* TESTES */}
       <FeatureSection
         id="funcionalidades"
         badge={t.testes.badge}
-        badgeColor="bg-rose-50 text-rose-700"
+        badgeColor={pill.amber}
         title={t.testes.title}
         description={t.testes.description}
         checks={[...t.testes.checks]}
-        className="bg-rose-50/40"
+        className="bg-paper2"
       >
         <TestesDemo />
       </FeatureSection>
 
-      {/* Transition: Rose → Cool green */}
-      <div className="h-16 bg-gradient-to-b from-rose-50/40 to-emerald-50/30" />
-
       {/* CALENDARIO */}
       <FeatureSection
         badge={t.calendario.badge}
-        badgeColor="bg-amber-50 text-amber-700"
+        badgeColor={pill.sage}
         title={t.calendario.title}
         description={t.calendario.description}
         checks={[...t.calendario.checks]}
         reversed
-        className="bg-emerald-50/30"
+        className="bg-paper"
       >
         <CalendarioDemo />
       </FeatureSection>
 
-      {/* Transition: Cool green → White */}
-      <div className="h-16 bg-gradient-to-b from-emerald-50/30 to-white" />
-
       {/* TURMAS */}
       <FeatureSection
         badge={t.turmas.badge}
-        badgeColor="bg-blue-50 text-blue-700"
+        badgeColor={pill.plum}
         title={t.turmas.title}
         description={t.turmas.description}
         checks={[...t.turmas.checks]}
+        className="bg-paper2"
       >
         <TurmasDemo />
       </FeatureSection>
 
-      {/* Transition: White → Warm cream */}
-      <div className="h-16 bg-gradient-to-b from-white via-orange-50/20 to-orange-50/40" />
-
       {/* ASSIDUIDADE */}
       <FeatureSection
         badge={t.assiduidade.badge}
-        badgeColor="bg-red-50 text-red-600"
+        badgeColor={pill.terra}
         title={t.assiduidade.title}
         description={t.assiduidade.description}
         checks={[...t.assiduidade.checks]}
         reversed
-        className="bg-orange-50/40"
+        className="bg-paper"
       >
         <AssiduidadeDemo />
       </FeatureSection>
 
-      {/* Transition: Warm cream → Purple tint */}
-      <div className="h-16 bg-gradient-to-b from-orange-50/40 via-purple-50/20 to-purple-50/40" />
-
       {/* AVALIAÇÃO */}
       <FeatureSection
         badge={t.avaliacao.badge}
-        badgeColor="bg-purple-50 text-purple-700"
+        badgeColor={pill.amber}
         title={t.avaliacao.title}
         description={t.avaliacao.description}
         checks={[...t.avaliacao.checks]}
-        className="bg-purple-50/40"
+        className="bg-paper2"
       >
         <AvaliacaoDemo />
       </FeatureSection>
 
-      {/* Transition: Purple → White */}
-      <div className="h-20 bg-gradient-to-b from-purple-50/40 to-white" />
-
-      {/* CTA */}
       <CtaSection />
-
-      {/* Footer */}
       <Footer />
     </>
   );

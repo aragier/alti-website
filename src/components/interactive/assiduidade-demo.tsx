@@ -22,25 +22,25 @@ const statusCycle: Status[] = ["present", "absent", "late"];
 
 const statusConfig: Record<Status, { bg: string; border: string; icon: string; iconBg: string; textColor: string }> = {
   present: {
-    bg: "bg-green-50",
-    border: "border-green-200",
+    bg: "bg-sage-bg",
+    border: "border-sage-bg",
     icon: "✓",
-    iconBg: "bg-green-500",
-    textColor: "text-green-600",
+    iconBg: "bg-sage-dot",
+    textColor: "text-sage-ink",
   },
   absent: {
-    bg: "bg-red-50",
-    border: "border-red-200",
+    bg: "bg-terra-bg",
+    border: "border-terra-bg",
     icon: "✗",
-    iconBg: "bg-red-500",
-    textColor: "text-red-600",
+    iconBg: "bg-terra-dot",
+    textColor: "text-terra-ink",
   },
   late: {
-    bg: "bg-amber-50",
-    border: "border-amber-200",
+    bg: "bg-amber-bg",
+    border: "border-amber-bg",
     icon: "⏰",
-    iconBg: "bg-amber-500",
-    textColor: "text-amber-600",
+    iconBg: "bg-amber-dot",
+    textColor: "text-amber-ink",
   },
 };
 
@@ -73,13 +73,13 @@ export function AssiduidadeDemo() {
   const presentCount = students.filter((s) => s.status === "present").length;
 
   return (
-    <div className="bg-white rounded-2xl p-6 shadow-[0_8px_32px_rgba(0,0,0,0.06),0_0_0_1px_rgba(0,0,0,0.03)]">
+    <div className="bg-white rounded-2xl p-6 border border-line shadow-[0_8px_32px_rgba(31,42,46,0.04)]">
       <div className="flex items-center justify-between mb-4">
         <div>
-          <h3 className="font-bold text-base text-gray-900">{t.assiduidade.classInfo}</h3>
-          <p className="text-xs text-gray-500 mt-0.5">{t.assiduidade.dateInfo}</p>
+          <h3 className="font-serif font-semibold text-base text-ink">{t.assiduidade.classInfo}</h3>
+          <p className="text-xs text-ink3 mt-0.5">{t.assiduidade.dateInfo}</p>
         </div>
-        <div className="bg-green-100 text-green-800 px-3 py-1.5 rounded-lg text-xs font-semibold">
+        <div className="bg-sage-bg text-sage-ink px-3 py-1.5 rounded-lg text-xs font-semibold">
           {presentCount}/{students.length}
         </div>
       </div>
@@ -99,7 +99,7 @@ export function AssiduidadeDemo() {
                 >
                   {config.icon}
                 </div>
-                <span className="text-sm text-gray-900 font-medium">{student.name}</span>
+                <span className="text-sm text-ink font-medium">{student.name}</span>
               </div>
               <span className={`text-xs font-semibold ${config.textColor}`}>
                 {getStatusLabel(student.status)}
@@ -109,7 +109,7 @@ export function AssiduidadeDemo() {
         })}
       </div>
 
-      <p className="mt-4 text-center text-xs text-gray-400 italic">
+      <p className="mt-4 text-center text-xs text-ink3 italic">
         {t.assiduidade.interactiveHint}
       </p>
     </div>
